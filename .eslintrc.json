@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "@typoerr/eslint-config",
+    "@typoerr/eslint-config/+typescript"
+  ],
+  "ignorePatterns": [
+    "/public/**",
+    "/dist/**"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "commonjs": true,
+    "es6": true
+  }
+}

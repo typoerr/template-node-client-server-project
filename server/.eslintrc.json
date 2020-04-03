@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "@typoerr/eslint-config",
+    "@typoerr/eslint-config/+typescript"
+  ],
+  "ignorePatterns": [
+    "/public/**",
+    "/dist/**"
+  ],
+  "rules": {
+    "@typescript-eslint/camelcase": 0
+  }
+}
