@@ -8,7 +8,7 @@
     ],
     "baseUrl": ".",
     "sourceMap": true,
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "strict": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
@@ -17,6 +17,7 @@
     "noEmitOnError": true,
     "forceConsistentCasingInFileNames": true,
     "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
     "pretty": true,
     "types": [
       "node",

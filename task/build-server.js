@@ -4,8 +4,9 @@ const nodemon = require('gulp-nodemon')
 const ts = require('gulp-typescript')
 
 const base = path.resolve(__dirname, '../server')
+const config = path.resolve(base, 'tsconfig.json')
 
-const project = ts.createProject('../server/tsconfig')
+const project = ts.createProject(config)
 
 function build() {
   return gulp
