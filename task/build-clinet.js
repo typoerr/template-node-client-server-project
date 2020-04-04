@@ -6,7 +6,7 @@ const TSConfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
 const env = process.env.NODE_ENV || 'development'
 const base = path.resolve(__dirname, '../client')
-const input = path.join(base, '**/*.(ts|tsx)')
+const input = path.join(base, '**/*.+(ts|tsx)')
 const output = path.join(base, '../dist/client')
 const tsconfig = path.join(base, 'tsconfig.json')
 

@@ -4,7 +4,7 @@ const nodemon = require('gulp-nodemon')
 const ts = require('gulp-typescript')
 
 const base = path.resolve(__dirname, '../server')
-const input = path.join(base, '**/*.(ts|tsx)')
+const input = path.join(base, '**/*.+(ts|tsx)')
 const output = path.join(base, '../dist/server')
 const ignore = path.join(base, '**/*.test.ts')
 const config = path.join(base, 'tsconfig.json')
