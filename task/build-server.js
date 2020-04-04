@@ -4,23 +4,25 @@ const nodemon = require('gulp-nodemon')
 const ts = require('gulp-typescript')
 
 const base = path.resolve(__dirname, '../server')
-const config = path.resolve(base, 'tsconfig.json')
-
+const input = path.join(base, '**/*.(ts|tsx)')
+const output = path.join(base, '../dist/server')
+const ignore = path.join(base, '**/*.test.ts')
+const config = path.join(base, 'tsconfig.json')
 const project = ts.createProject(config)
 
 function build() {
   return gulp
-    .src('./server/**/*.ts') //
+    .src(input) //
     .pipe(project())
-    .pipe(gulp.dest('./dist/server'))
+    .pipe(gulp.dest(output))
 }
 
 function watch(done) {
   return nodemon({
     exec: `ts-node -r tsconfig-paths/register ${base}/index.ts`,
-    watch: ['./server/**/*.ts'],
+    watch: [input],
     ext: 'ts',
-    ignore: ['./server/**/*.test.ts'],
+    ignore: [ignore],
     done,
   })
 }
